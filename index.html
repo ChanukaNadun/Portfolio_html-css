@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        </link>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav class="navbar">
+                <div class="logo">
+                    <span>Logo</span>
+                </div>
+                <div class="nav">
+                    <div class="nav_menu" id="navMenu">
+                        <ul class="link_list">
+                            <div class="close-menu">
+                                <i class="fa fa-times" onclick="menuClose();"></i>
+                            </div>
+                            <li class="list">
+                                <a href="#" class='link'>HOME</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class='link'>SERVICES</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class='link'>BLOG</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class='link'>ABOUT</a>
+                            </li>
+                            <li class="list">
+                                <a href="#" class='link'>CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav_menu_btn">
+                        <i class="fa fa-bars" onclick="myMenuFunction();"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="btn"><i class="fa fa-download"></i><span>Download CV</span></a>
+                    </div>
+                    <div class="mode">
+                        <div class="moon-sun" id="toggle-switch">
+                            <i class="fa fa-moon" id="moon"></i>
+                            <i class="fa fa-sun" id="sun"></i>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </nav>
+            <main>
+                <div class="col col-1">
+                    <div class="hero_box">
+                        <div class="hello">
+                            <p>Hello I'm</p>
+                        </div>
+                        <div class="headline">
+                            <span class="multiText"></span>
+                        </div>
+                        <div class="hello_p">
+                            <p>My name is CHANUKA NADUN, I'm web developer with over 1 year experience.</p>
+                        </div>
+                        <div class="social_icons">
+                            <div class="icon_circle"></div>
+                            <link rel="stylesheet"
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            </link>
+                            <a href="#" class="fa fa-facebook icon"></a>
+                            <a href="#" class="fa fa-twitter icon"></a>
+                            <a href="#" class="fa fa-linkedin-square icon"></a>
+                            <a href="#" class="fa fa-whatsapp icon"></a>
+                        </div>
+                        <div class="hero_btn">
+                            <button class="btn_1">Hire me</button>
+                            <button class="btn_2"><a href="#">Download CV</a></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="images">
+                <img src="Bgd_img.jpg" alt="" class="bg"></img>
+                <img src="my_img.png" alt="" class="boy"></img>
+            </div>
+        
+        
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+        <script>
+            var typingEffect = new Typed(".multiText",{
+                strings: ["Designer", "Coder", "Developer"],
+                loop: true,
+                typeSpeed: 100,
+                backSpeed: 80,
+                backDelay: 2000,
+            })
+        </script>
+        <script src="script.js"></script>
+    </body>
+    
+    
+</html>

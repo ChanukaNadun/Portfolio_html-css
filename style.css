@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --first-color: #ffffff;
+    --second-color: #444444;
+    --black-color: #000000;
+    --medium-dark: #444444;
+    --icon-bg: #f4f4f4;
+    --mode-color: #cccccc;
+}
+
+body {
+    background: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+body.dark {
+    --bg-color: #242526;
+    --first-color: #ffffff;
+    --second-color: #eeeeee;
+    --black-color: #ffffff;
+    --medium-dark: #242526;
+    --icon-bg: #f4f4f4;
+    --mode-color: #ffffff;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 15px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 135px;
+    line-height: 100px;
+    z-index: 100;
+}
+
+.logo span {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--second-color)
+}
+
+.nav {
+    display: flex;
+    column-gap: 2vw;
+}
+
+.close-menu {
+    display: none;
+}
+
+.link_list {
+    display: flex;
+}
+
+.list {
+    position: relative;
+    list-style: none;
+    margin: 0 30px;
+}
+
+.list .link {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.link:hover {
+    color: #8759f2;
+}
+
+@keyframes slideup {
+    from {
+        top: 130px;
+    }
+
+    top {
+        top: 100px;
+    }
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--first-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #8749f2;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+}
+
+.moon-sun {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--mode-color);
+}
+
+.moon-sun :is(#moon, #sun) {
+    position: absolute;
+    color: var(--medium-dark);
+    transition: .2s ease-in-out;
+}
+
+#sun {
+    opacity: 0;
+}
+
+body.dark #sun {
+    opacity: 1;
+}
+
+body.dark #moon {
+    opacity: 0;
+}
+
+.nav_menu_btn {
+    display: none;
+}
+
+.col {
+    display: flex;
+    width: 50%;
+}
+
+.col-1 {
+    align-items: center;
+    padding-inline: 4vm 50px;
+    color: var(--second-color);
+    font-size: 20px;
+    margin-top: 250px;
+}
+
+.hero_box {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero_box .hello {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.hero_box .hello_p {
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.hero_box .headline {
+    font-size: 45px;
+    font-weight: 700px;
+    color: #8749f2;
+    margin-bottom: 10px;
+}
+
+.multiText {
+    font-family: sans-serif;
+    color: #8749f2;
+    font-size: 80px;
+    font-weight: 600;
+}
+.social_icons {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: var(--second-color);
+    cursor: pointer;
+    z-index: 0px;
+}
+.icon_circle {
+    position: absolute;
+    top: -8px;
+    left: -15px;
+    transform: transform(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 30px;
+    animation: iconSlide 4s infinite alternate;
+}
+@keyframes iconSlide {
+    25% {
+        border: 2px solid #e6d12e;
+        left: -12px;
+    }
+    50% {
+        border: 2px solid #2ee665;
+        left: 40px;
+    }
+    75% {
+        border: 2px solid #2e43e6;
+        left: 90px;
+    }
+    100% {
+        border: 2px solid #e62e9f;
+        left: 140px;
+    }
+}
+.social_icons:hover .icon_circle {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.hero_box .hero_btn {
+    margin-top: 30px;
+}
+.hero_box button {
+    padding: 15px 40px;
+    border-radius: 8px;
+    border: none;
+}
+.btn_1 {
+    background: #8749f2;
+    color: var(--first-color);
+}
+.btn_2 {
+    background: #8759f2;
+    margin-left: 1vm;
+}
+.btn_2 a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+.images {
+    width: 45%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images img {
+    height: 500%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: all 1s;
+}
+.images:hover .bg {
+    bottom: 40%;
+    border-radius: 8px;
+}
+.images:hover .boy {
+    left: 60%;
+}
+@media (max-width: 1084px) {
+    .nav_menu.responsive{
+        position: fixed;
+        left: 0;
+    }
+    .nav_menu {
+        position: fixed;
+        left: -100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 500px;
+        width: 40%;
+        height: 100%;
+        border-radius: 0 20px 0 0;
+        backdrop-filter: blur(10px);
+        box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+        background-color: rgba(211, 211, 211, 0.2);
+        z-index: 100;
+    }
+    .link_list {
+        flex-direction: column;
+    }
+    .nav_menu_btn {
+        display: flex;
+        align-items: center;
+    }
+    .nav_menu_btn .fa-bars {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 45px;
+         height: 45px;
+         background: var(--second-color);
+         color: var(--bg-color);
+         border-radius: 50%;
+         cursor: pointer;
+    }
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 300px;
+    }
+    .images {
+        width: 45%;
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        right: 100px;
+    }
+    .images .bg {
+        width: 0;
+        height: 0;
+    }
+    .images:hover {
+        left: 90%;
+    }
+    .images img {
+        height: 100%;
+        position: absolute;
+        left: 70%;
+        bottom: 0;
+        transition: all 1s;
+    }
+}
+
